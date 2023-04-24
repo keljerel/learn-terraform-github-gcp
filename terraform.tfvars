@@ -1,1 +1,1 @@
-project                  = "vibrant-climber-324821"
+project = "vibrant-climber-324821"
