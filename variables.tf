@@ -1,5 +1,5 @@
-variable "project" { 
- default = "vibrant-climber-324821"
+variable "project" {
+  default = "vibrant-climber-324821"
 }
 
 variable "region" {
