@@ -21,6 +21,12 @@ resource "google_compute_instance" "vm_instance" {
     access_config {
     }
   }
+
+  metadata = {
+    "ssh-keys" = <<EOT
+    kbuxton:ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC+e5HO//4LPF02HUNlwuLvLRQa6BZhOnPc3DYVrQor7dVJr5QyVX1qmLEReJHzq7bq3qdtQdNS8emJoBtR7BjRCxUS/eI3JAfF/YfJgeperA1LfEtpoTH0O+uDPznWA78hnmaFfrd/KmrAQJ81c0gnDOqHUCpMVeITYeMpV99TavxL3FO+ZTQFKWnuOmIYh8jqSrcx6i6V65AAaEQfPsON+/U1AIjyjw/IyoB1347+NKeIaKgJJZRIeWOtkYENuRe0DgeJ8fIVGNu8x1C7L10duSjIuN5cGwipqHyU5TXqNOGqxvdNjNwohGxFMDGGLJ1rFmuldZURxrPq9ypJXR19 kbuxton
+    EOT
+  }
 }
 resource "google_compute_firewall" "ssh" {
   name = "allow-ssh"
