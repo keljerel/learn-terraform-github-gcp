@@ -8,6 +8,7 @@ resource "google_compute_network" "vpc_network" {
 resource "google_compute_instance" "vm_instance" {
   name         = "terraform-instance"
   machine_type = "e2-micro"
+  labels       = {OS = "Linux"}
   tags         = ["ssh"]
 
   boot_disk {
